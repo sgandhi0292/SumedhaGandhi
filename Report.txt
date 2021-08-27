@@ -1,0 +1,38 @@
+									Malware- Agent Tesla
+
+Let’s know a bit about the malware - Agent Tesla
+
+Agent Tesla is a malware family written in .NET for Microsoft Windows systems and has much in common with spyware in its capabilities. It has many spyware-like capabilities such as –
+
+1.	stealing credentials from browsers and other installed applications
+2.	keylogging, collecting screenshots
+3.	capturing web camera images
+4.	gathering clipboard data
+
+Credential theft occurs against the following applications if installed, and send the resulting data back to the C&C server like Mozilla Firefox, 
+Google Chrome, Internet Explorer, Apple Safari, Opera, Torch Browser, SeaMonkey, UC Browser etc. 
+
+Some points to be noted-
+
+1.	Type of malware- Trojan
+	This Trojan arrives on a system as a file dropped by other malware or as a file downloaded unknowingly by users when visiting malicious sites.
+2.	Type of file – EXE
+3.	It exploits Windows vulnerabilities
+4.	Cybersecurity researchers discovered that Agent Tesla also exploits Microsoft MS Office vulnerabilities. 
+	The vulnerabilities let attackers run arbitrary code or execute scripts that deliver the Agent Tesla payload.
+
+Strings used in yara rule-
+
+1.	“This program cannot be run in DOS mode” –
+	This message is intended to be displayed when we try to run the program on MS-DOS or similar pre-Windows systems
+
+2.	“ArVX” – It is recognised as “Ansi based on Hybrid Analysis”
+	It is windows executable.
+	(Source: https://www.sophos.com/en-us/threat-center/threat-analyses/viruses-and-spyware/Troj~Agent-ARVX.aspx)
+
+3.	“AzM” – It is recognised as “Ansi based on Hybrid Analysis”
+	It arrives on a system as a file dropped by other malware or as a file downloaded unknowingly by users when visiting malicious sites.
+	(Source: https://www.sophos.com/en-us/threat-center/threat-analyses/viruses-and-spyware/Troj~Steal-AZM/detailed-analysis.aspx)
+
+4.	“a4attempt4” – Executable malware
+
