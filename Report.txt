@@ -1,6 +1,10 @@
 									Malware- Agent Tesla
-
-Let’s know a bit about the malware - Agent Tesla
+	Malware Name - Agent Tesla
+	Type of malware- Remote Access Trojan
+	Type of file – Win32 EXE
+	It exploits Windows vulnerabilities
+	Cybersecurity researchers discovered that Agent Tesla also exploits Microsoft MS Office vulnerabilities. 
+	The vulnerabilities let attackers run arbitrary code or execute scripts that deliver the Agent Tesla payload.
 
 Agent Tesla is a malware family written in .NET for Microsoft Windows systems.It is a formidable Remote Access Trojan (RAT) that has become exceptionally good at getting around 
 defense barriers in order to monitor its victims . It has many spyware-like capabilities such as –
@@ -13,13 +17,6 @@ defense barriers in order to monitor its victims . It has many spyware-like capa
 Credential theft occurs against the following applications if installed, and send the resulting data back to the C&C server like Mozilla Firefox, 
 Google Chrome, Internet Explorer, Apple Safari, Opera, Torch Browser, SeaMonkey, UC Browser etc. 
 
-Some points to be noted-
-
-1.	Type of malware- Remote Access Trojan
-2.	Type of file – EXE
-3.	It exploits Windows vulnerabilities
-4.	Cybersecurity researchers discovered that Agent Tesla also exploits Microsoft MS Office vulnerabilities. 
-	The vulnerabilities let attackers run arbitrary code or execute scripts that deliver the Agent Tesla payload.
 
 Strings used in yara rule-
 
