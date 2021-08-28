@@ -2,7 +2,8 @@
 
 Let’s know a bit about the malware - Agent Tesla
 
-Agent Tesla is a malware family written in .NET for Microsoft Windows systems and has much in common with spyware in its capabilities. It has many spyware-like capabilities such as –
+Agent Tesla is a malware family written in .NET for Microsoft Windows systems.It is a formidable Remote Access Trojan (RAT) that has become exceptionally good at getting around 
+defense barriers in order to monitor its victims . It has many spyware-like capabilities such as –
 
 1.	stealing credentials from browsers and other installed applications
 2.	keylogging, collecting screenshots
@@ -14,8 +15,7 @@ Google Chrome, Internet Explorer, Apple Safari, Opera, Torch Browser, SeaMonkey,
 
 Some points to be noted-
 
-1.	Type of malware- Trojan
-	This Trojan arrives on a system as a file dropped by other malware or as a file downloaded unknowingly by users when visiting malicious sites.
+1.	Type of malware- Remote Access Trojan
 2.	Type of file – EXE
 3.	It exploits Windows vulnerabilities
 4.	Cybersecurity researchers discovered that Agent Tesla also exploits Microsoft MS Office vulnerabilities. 
@@ -23,16 +23,22 @@ Some points to be noted-
 
 Strings used in yara rule-
 
-1.	“This program cannot be run in DOS mode” –
+1.	$var1 = “This program cannot be run in DOS mode”
 	This message is intended to be displayed when we try to run the program on MS-DOS or similar pre-Windows systems
 
-2.	“ArVX” – It is recognised as “Ansi based on Hybrid Analysis”
-	It is windows executable.
-	(Source: https://www.sophos.com/en-us/threat-center/threat-analyses/viruses-and-spyware/Troj~Agent-ARVX.aspx)
+2.	$var2 = “ArVX” 
+	It is recognised as “Ansi based on Hybrid Analysis”
+	It is a windows executable and categorzied as Trojan by Sophos.
+	(Ref: https://www.sophos.com/en-us/threat-center/threat-analyses/viruses-and-spyware/Troj~Agent-ARVX.aspx)
 
-3.	“AzM” – It is recognised as “Ansi based on Hybrid Analysis”
-	It arrives on a system as a file dropped by other malware or as a file downloaded unknowingly by users when visiting malicious sites.
-	(Source: https://www.sophos.com/en-us/threat-center/threat-analyses/viruses-and-spyware/Troj~Steal-AZM/detailed-analysis.aspx)
+3.	$var3 = “AzM” 
+	It is recognised as “Ansi based on Hybrid Analysis”
+	This could be a trojan or a spyware or a worm and it arrives on a system as a file dropped by other malware or as a file downloaded 
+	unknowingly by users when visiting malicious sites.
+	like-TSPY_ZBOT.AZM , TROJ_SMALL.AZM
+	(Ref: 	https://www.trendmicro.com/vinfo/us/threat-encyclopedia/search/troj_tibs.azm/
+		https://www.sophos.com/en-us/threat-center/threat-analyses/viruses-and-spyware/Troj~Steal-AZM/detailed-analysis.aspx)
 
-4.	“a4attempt4” – Executable malware
+4.	$var4 = “a4attempt4” 
+	It is a malware executable
 
