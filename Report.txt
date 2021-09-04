@@ -20,8 +20,8 @@ Google Chrome, Internet Explorer, Apple Safari, Opera, Torch Browser, SeaMonkey,
 
 Strings used in yara rule-
 
-1.	$var1 = “This program cannot be run in DOS mode”
-	This message is intended to be displayed when we try to run the program on MS-DOS or similar pre-Windows systems
+1.	$var1 = “46599D29C9831138B75ED7B25049144259139724”
+	This is the embedded hash value found common in all three files.
 
 2.	$var2 = “ArVX” 
 	It is recognised as “Ansi based on Hybrid Analysis”
@@ -29,13 +29,11 @@ Strings used in yara rule-
 	(Ref: https://www.sophos.com/en-us/threat-center/threat-analyses/viruses-and-spyware/Troj~Agent-ARVX.aspx)
 
 3.	$var3 = “AzM” 
-	It is recognised as “Ansi based on Hybrid Analysis”
-	This could be a trojan or a spyware or a worm and it arrives on a system as a file dropped by other malware or as a file downloaded 
-	unknowingly by users when visiting malicious sites.
-	like-TSPY_ZBOT.AZM , TROJ_SMALL.AZM
-	(Ref: 	https://www.trendmicro.com/vinfo/us/threat-encyclopedia/search/troj_tibs.azm/
-		https://www.sophos.com/en-us/threat-center/threat-analyses/viruses-and-spyware/Troj~Steal-AZM/detailed-analysis.aspx)
+	It is recognised as “Ansi based on Hybrid Analysis” and it is also a windows executable.
+	(Ref:https://www.sophos.com/en-us/threat-center/threat-analyses/viruses-and-spyware/Troj~Steal-AZM/detailed-analysis.aspx)
 
-4.	$var4 = “a4attempt4” 
-	It is a malware executable
+4.	$var4 = “a4attempt4.exe” 
+	It is a malware executable.
+	(Ref: https://infosec.cert-pa.it/analyze/059bb09924b0d8cb7a8cffb72fd0bb03.html
+	      https://inquest.net/2018/05/22/field-notes-agent-tesla-open-directory)
 
